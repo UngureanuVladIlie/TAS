@@ -30,7 +30,7 @@ namespace TestNunit
             Assert.AreEqual(fSumaAsteptataSursa, contSursa.FSumaBani);
             Assert.AreEqual(fSumaAsteptataDest, contDest.FSumaBani);
             Assert.AreEqual(bRezultatOperatieAsteptat, bSuccesOperatie);
-            convertorMock.Verify(m => m.EurToRon(fSumaInEuro), Times.Once());
+            convertorMock.Verify(m => m.EurToRon(fSumaInEuro), Times.Exactly(1));
         }
 
         [Test]
